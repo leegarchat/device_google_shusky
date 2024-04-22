@@ -26,9 +26,8 @@ $(call soong_config_set,shusky_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOAD
 
 
 TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_HUSKY_VERSION)
-# Keeps flexibility for kasan and ufs builds
-TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_HUSKY_DIR)
-TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_HUSKY_DIR)/kernel-headers
+TARGET_KERNEL_DIR := device/google/shusky-kernels/evolution
+TARGET_BOARD_KERNEL_HEADERS := $(TARGET_KERNEL_DIR)/kernel-headers
 
 LOCAL_PATH := device/google/shusky
 
