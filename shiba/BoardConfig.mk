@@ -36,7 +36,6 @@ BOARD_USES_GENERIC_AUDIO := true
 USES_DEVICE_GOOGLE_SHUSKY := true
 BOARD_KERNEL_CMDLINE += swiotlb=noforce
 BOARD_KERNEL_CMDLINE += disable_dma32=on
-# BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 include device/google/shusky/device-shusky-common.mk
 

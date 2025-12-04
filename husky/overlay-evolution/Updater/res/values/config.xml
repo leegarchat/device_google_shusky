@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="updater_server_url" translatable="false">https://raw.null.com/null/nulls.json</string>
-  <string name="menu_changelog_url" translatable="false">https://raw.null.com/null/nulls/<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
-</resources>

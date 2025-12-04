@@ -24,6 +24,8 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json
 
+# Custom thermal configs
+$(call inherit-product-if-exists,$(LOCAL_PATH)/thermal/PartCustomThermalConfigs.mk)
 # Power HAL config
 ifeq (,$(TARGET_VENDOR_PERF_CONFIG_PATH))
 TARGET_VENDOR_PERF_CONFIG_PATH := device/google/shusky/perf
