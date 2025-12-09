@@ -14,9 +14,6 @@ product/etc/firmware/music_detector.sound_model
 product/etc/firmware/music_detector.sound_model_2
 product/etc/firmware/music_detector.sound_model_tflite
 
-# Camera
-product/priv-app/GoogleCamera/GoogleCamera.apk;OVERRIDES=Aperture,Camera2;PRESIGNED
-
 # Camera extensions
 product/etc/permissions/androidx.camera.extensions.impl.xml
 product/priv-app/PixelCameraServices/PixelCameraServices.apk;PRESIGNED
@@ -43,8 +40,11 @@ product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIO
 # IMS
 product/etc/sysconfig/allowlist_com.shannon.imsservice.xml
 
+# NFC
+product/etc/libnfc-nci.conf
+
 # Permissions
-product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-evolution.xml
+product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
 product/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/nexus.xml
@@ -149,7 +149,7 @@ system_ext/etc/sysconfig/sysconfig_com.google.pixel.iwlan.xml
 system_ext/priv-app/PixelIwlan/PixelIwlan.apk
 
 # Permissions
-system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-evolution.xml
+system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
 # Radio
 system_ext/etc/default-permissions/default-permissions-euiccpixel.xml
@@ -179,6 +179,10 @@ system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml
 system_ext/etc/permissions/oemrilhook.xml
 system_ext/framework/oemrilhook.jar
 system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
+
+# Watchdog
+system_ext/bin/gs_watchdogd
+system_ext/etc/init/init.gs_watchdogd.rc
 
 # VZW
 system_ext/etc/permissions/vzw_mvs_permissions.xml
