@@ -15,3 +15,4 @@ include device/google/shusky/sepolicy/husky-sepolicy.mk
 include $(DEVICE_PATH)/BoardConfigCommon.mk
 
 include $(VENDOR_PATH)/BoardConfigVendor.mk
+include $(DEVICE_PATH)/$(TARGET_BOOTLOADER_BOARD_NAME)/BoardConfigEvolution.mk
