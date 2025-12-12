@@ -7,6 +7,15 @@
 # Inherit some common stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+ifneq ($(WITH_GMS),true)
+    PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+        system/app/GoogleExtShared/GoogleExtShared.apk \
+        system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk \
+        system/etc/permissions/privapp-permissions-google.xml \
+        system/priv-app/DocumentsUIGoogle/DocumentsUIGoogle.apk \
+        system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk \
+        system/priv-app/TagGoogle/TagGoogle.apk
+endif
 # Inherit device configuration
 DEVICE_CODENAME := shiba
 DEVICE_PATH := device/google/shusky
@@ -28,6 +37,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="shiba-user 16 BP3A.251105.015 14339231 release-keys" \
     BuildFingerprint=google/shiba/shiba:16/BP3A.251105.015/14339231:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
-
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
 $(call inherit-product, device/google/zuma/customparts/PartCustomThermalConfigs.mk)

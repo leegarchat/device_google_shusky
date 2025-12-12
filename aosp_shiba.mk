@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+WITH_GMS = true
+
 $(call inherit-product, device/google/zuma/aosp_common.mk)
 $(call inherit-product, device/google/shusky/device-shiba.mk)
 
