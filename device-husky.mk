@@ -6,7 +6,32 @@
 #
 
 TARGET_LINUX_KERNEL_VERSION := 6.1
-TARGET_KERNEL_DIR := device/google/shusky-kernels/evolution
+
+
+BASE_KERNEL_PATH := device/google/shusky-kernels
+
+DEFAULT_KERNEL_FOLDER := evolution
+DEFAULT_KERNEL_DIR := $(BASE_KERNEL_PATH)/$(DEFAULT_KERNEL_FOLDER)
+
+SELECTED_KERNEL_DIR :=
+ifeq ($(strip $(TARGET_KERNEL_DIR_EXT)),)
+    SELECTED_KERNEL_DIR := $(DEFAULT_KERNEL_DIR)
+    
+else
+    CANDIDATE_DIR := $(BASE_KERNEL_PATH)/$(TARGET_KERNEL_DIR_EXT)
+    ifeq ($(wildcard $(CANDIDATE_DIR)),)
+        $(warning 🛑 WARNING: Кастомная директория ядра "$(CANDIDATE_DIR)" НЕ НАЙДЕНА!)
+        $(warning ➡️ Возвращаемся к использованию пути по умолчанию: $(DEFAULT_KERNEL_DIR))
+        SELECTED_KERNEL_DIR := $(DEFAULT_KERNEL_DIR)
+        
+    else
+        SELECTED_KERNEL_DIR := $(CANDIDATE_DIR)
+    endif
+endif
+TARGET_KERNEL_DIR := $(SELECTED_KERNEL_DIR)
+
+$(warning ⚙️ KERNEL_DIR: Финальный путь к пребилдам ядра: $(TARGET_KERNEL_DIR))
+
 TARGET_BOARD_KERNEL_HEADERS := $(TARGET_KERNEL_DIR)/kernel-headers
 
 LOCAL_PATH := device/google/shusky
