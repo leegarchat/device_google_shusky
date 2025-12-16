@@ -204,6 +204,7 @@ main() {
     FORCE_ENV=false
     FORCE_LUNCH=false
     APP_TARGET=""
+	export RELEASE_PIXEL_2025_ENABLED="true"
     # Парсинг аргументов
     while [[ $# -gt 0 ]]; do
       case $1 in
