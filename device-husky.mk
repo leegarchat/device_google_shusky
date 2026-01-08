@@ -104,7 +104,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
+    AvoidAppsInCutoutOverlay \
+	UpdaterOverlayHuskyLeeGar
 
 PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
 

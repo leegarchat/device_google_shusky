@@ -125,7 +125,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    PixelDisplayServiceOverlayShiba
+    PixelDisplayServiceOverlayShiba \
+	UpdaterOverlayShibaLeeGar
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk

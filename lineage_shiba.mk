@@ -7,15 +7,16 @@
 # Inherit some common stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-ifneq ($(WITH_GMS),true)
-    PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-        system/app/GoogleExtShared/GoogleExtShared.apk \
-        system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk \
-        system/etc/permissions/privapp-permissions-google.xml \
-        system/priv-app/DocumentsUIGoogle/DocumentsUIGoogle.apk \
-        system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk \
-        system/priv-app/TagGoogle/TagGoogle.apk
-endif
+# ifneq ($(WITH_GMS),true)
+#     PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+#         system/app/GoogleExtShared/GoogleExtShared.apk \
+#         system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk \
+#         system/etc/permissions/privapp-permissions-google.xml \
+#         system/priv-app/DocumentsUIGoogle/DocumentsUIGoogle.apk \
+#         system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk \
+#         system/priv-app/TagGoogle/TagGoogle.apk \
+# 		system/apex/com.google.android.permission.apex
+# endif
 # Inherit device configuration
 DEVICE_CODENAME := shiba
 DEVICE_PATH := device/google/shusky

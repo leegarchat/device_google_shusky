@@ -8,5 +8,5 @@
 
     <!-- Android version screen, build maintainer -->
     <string name="build_maintainer_summary" translatable="false">LeeGarChat</string>
-    <!-- <string name="build_maintainer_donate_url" translatable="false"></string> -->
+    <string name="build_maintainer_donate_url" translatable="false">https://boosty.to/leegar</string>
 </resources>
