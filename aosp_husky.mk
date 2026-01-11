@@ -1,7 +1,3 @@
-#
-# SPDX-FileCopyrightText: 2021 The Android Open-Source Project
-# SPDX-License-Identifier: Apache-2.0
-#
 
 WITH_GMS = true
 

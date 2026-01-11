@@ -1,8 +1,4 @@
-#
-# SPDX-FileCopyrightText: The LineageOS Project
-# SPDX-FileCopyrightText: The Calyx Institute
-# SPDX-License-Identifier: Apache-2.0
-#
+
 
 # Security - must be defined before including BoardConfig-common.mk
 BOOT_SECURITY_PATCH := 2025-11-05
