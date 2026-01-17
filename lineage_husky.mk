@@ -20,8 +20,8 @@ TARGET_SCREEN_HEIGHT := 2992
 TARGET_SCREEN_WIDTH := 1344
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="husky-user 16 BP3A.251105.015 14339231 release-keys" \
-    BuildFingerprint=google/husky/husky:16/BP3A.251105.015/14339231:user/release-keys \
+    BuildDesc="husky-user 16 BP4A.260105.004.E1 14587043 release-keys" \
+    BuildFingerprint=google/husky/husky:16/BP4A.260105.004.E1/14587043:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
