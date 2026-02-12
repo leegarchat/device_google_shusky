@@ -37,5 +37,8 @@ ro.com.google.ime.kb_pad_port_b=8
 ro.quick_start.device_id=shiba
 ro.quick_start.oem_id=00e0
 
+# Device family
+ro.build.device_family=HK3SB3AK3
+
 # Window extensions
 persist.settings.large_screen_opt.enabled=false

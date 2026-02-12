@@ -33,6 +33,9 @@ ro.support_hide_display_cutout=true
 # Google keyboard
 ro.com.google.ime.kb_pad_port_b=10.4
 
+# Device family
+ro.build.device_family=HK3SB3AK3
+
 # Quick start
 ro.quick_start.device_id=husky
 ro.quick_start.oem_id=00e0
