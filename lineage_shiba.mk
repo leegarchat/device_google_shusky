@@ -25,4 +25,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
+# $(call inherit-product, vendor/google/pixels_extras/pixels_extras.mk)
 $(call inherit-product, device/google/zuma/customparts/PartCustomThermalConfigs.mk)

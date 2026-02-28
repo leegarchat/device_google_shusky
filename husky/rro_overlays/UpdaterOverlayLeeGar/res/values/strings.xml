@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Ваши новые ссылки -->
-    <string name="updater_server_url">https://raw.null.com/null/nulls.json</string>
-    <string name="menu_changelog_url">https://raw.null.com/null/nulls/<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
+    <string name="updater_server_url">https://raw.githubusercontent.com/leegarchat/PixelExtraParts/main/OTA/builds/husky.json</string>
+    <string name="menu_changelog_url">https://raw.githubusercontent.com/leegarchat/PixelExtraParts/main/OTA/changelogs/husky.txt</string>
 </resources>
