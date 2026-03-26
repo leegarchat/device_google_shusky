@@ -35,92 +35,101 @@ ifneq ($(TARGET_BOOTS_16K),true)
 PRODUCT_16K_DEVELOPER_OPTION := true
 endif
 
-DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay-lineage
-DEVICE_PACKAGE_OVERLAYS += device/google/shusky/overlay-lineage
+# DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay
+# DEVICE_PACKAGE_OVERLAYS += device/google/shusky/husky/overlay-lineage
+# DEVICE_PACKAGE_OVERLAYS += device/google/shusky/overlay-lineage
 
 # Audio
-PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+# PRODUCT_COPY_FILES += \
+#     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 include device/google/zuma/device-shipping-common.mk
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.prebuilt.xml \
-    android.hardware.bluetooth_le.prebuilt.xml
-
-# Recovery files
-PRODUCT_COPY_FILES += \
-    device/google/shusky/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.husky.rc
-
 # NFC
-PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-	frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-	frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
+# PRODUCT_COPY_FILES += \
+# 	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+# 	frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+# 	frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+# 	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
+# 	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
-PRODUCT_PACKAGES += \
-	android.hardware.nfc-service.st
+# PRODUCT_PACKAGES += \
+# 	android.hardware.nfc-service.st
 
 # SecureElement
-PRODUCT_PACKAGES += \
-	android.hardware.secure_element-service.thales
+# PRODUCT_PACKAGES += \
+# 	android.hardware.secure_element-service.thales
 
-PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
-	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
+# PRODUCT_COPY_FILES += \
+# 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
+# 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
 # WiFi Overlay
-PRODUCT_PACKAGES += \
-	UwbOverlayHK3 \
-	UwbOverlayHK3Gsi \
-	WifiOverlay2023
+# PRODUCT_PACKAGES += \
+# 	UwbOverlayHK3 \
+# 	UwbOverlayHK3Gsi \
+# 	WifiOverlay2023
 
-# Location
-PRODUCT_PACKAGES += \
-    android.hardware.location.gps.prebuilt.xml
+# # Location
+# PRODUCT_PACKAGES += \
+#     android.hardware.location.gps.prebuilt.xml
 
-# Settings Overlay
-PRODUCT_PACKAGES += \
-    SettingsHuskyOverlay
+# # Settings Overlay
+# PRODUCT_PACKAGES += \
+#     SettingsHuskyOverlay
 
-# Window Extensions
-$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+# # Window Extensions
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 
-PRODUCT_PACKAGES += \
-	NfcOverlayHusky \
+# PRODUCT_PACKAGES += \
+# 	NfcOverlayHusky \
 
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay \
-	UpdaterOverlayHuskyLeeGar
+# PRODUCT_PACKAGES += \
+#     NoCutoutOverlay \
+#     AvoidAppsInCutoutOverlay \
+# 	UpdaterOverlayHuskyLeeGar
 
-PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
+# PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
 
-# ANGLE - Almost Native Graphics Layer Engine
-PRODUCT_PACKAGES += \
-    ANGLE
+# # ANGLE - Almost Native Graphics Layer Engine
+# PRODUCT_PACKAGES += \
+#     ANGLE
 
-# EUICC
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
-    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
+# # EUICC
+# PRODUCT_COPY_FILES += \
+#     frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
+#     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.sensors-V2-ndk.vendor:64
 
 # Init
-PRODUCT_PACKAGES += \
-    init.recovery.husky.touch.rc
+# PRODUCT_PACKAGES += \
+#     init.recovery.husky.touch.rc
 
 # Overlays
+# Overlays
 PRODUCT_PACKAGES += \
-    PixelDisplayServiceOverlayHusky
+    FrameworkResOverlayVendorShusky \
+    PixelNfcOverlayShusky \
+    PixelWifiOverlay2023Shusky \
+    SafetyRegulatoryInfoOverlayProductShusky
+
+PRODUCT_PACKAGES += \
+    DMServiceOverlayVendorHusky \
+    FrameworkResOverlayProductHusky \
+    FrameworkResOverlayVendorHusky \
+    PixelDisplayServiceOverlayProductHusky \
+    PixelNfcOverlayHusky \
+    PixelUwbOverlayHK3 \
+    SettingsGoogleHuskyOverlay \
+    SettingsHuskyOverlay \
+    SystemUIGoogleOverlayVendorHusky
+
+PRODUCT_PACKAGES += \
+    ApertureOverlayHusky
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
@@ -129,9 +138,19 @@ include hardware/google/pixel/powershare/device.mk
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
 
-# Sensors
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.husky.rc
+
 PRODUCT_PACKAGES += \
-    sensors.dynamic_sensor_hal
+    init.recovery.husky.touch.rc
+
+# Sensors
+# PRODUCT_PACKAGES += \
+#     sensors.dynamic_sensor_hal
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
+
+# Window extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.evolution.updater.leegar.overlay.shiba">
-    <overlay
-        android:targetPackage="org.evolution.updater"
-        android:priority="1000"
-        android:isStatic="true" />
-</manifest>

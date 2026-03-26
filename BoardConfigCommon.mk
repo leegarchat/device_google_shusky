@@ -1,7 +1,7 @@
 
 
 # Security - must be defined before including BoardConfig-common.mk
-BOOT_SECURITY_PATCH := 2026-02-05
+BOOT_SECURITY_PATCH := 2026-03-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 include device/google/zuma/BoardConfig-common.mk
@@ -24,5 +24,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/vendor \
     hardware/google/pixel-sepolicy/vibrator/common \
     hardware/google/pixel-sepolicy/vibrator/cs40l26
+
 # WiFi
 include $(DEVICE_PATH)/wifi/BoardConfig-wifi.mk
